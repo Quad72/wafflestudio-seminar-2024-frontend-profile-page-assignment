@@ -35,6 +35,11 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      <ul>
+        <li>조선해양공학과 20학번</li>
+        <li>현재 3학년 2학기 재학중입니다</li>
+        <li>MBTI는 ENTP입니다</li>
+      </ul>
     </>
   );
 }
