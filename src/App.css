@@ -40,3 +40,16 @@
 .read-the-docs {
   color: #888;
 }
+
+.centered-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  list-style-type: none;
+}
+
+.centered-list li {
+  margin: 0 10px;
+  padding-left: 1.5em;
+}

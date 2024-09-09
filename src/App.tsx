@@ -7,7 +7,14 @@ import viteLogo from '/vite.svg';
 import reactLogo from './assets/react.svg';
 
 function App() {
-  const [count, setCount] = useState(0);
+  //const [count, setCount] = useState(0);
+
+  const [fontSize, setFontSize] = useState(2);
+
+  // 버튼 클릭 시 호출되는 함수
+  const increaseFontSize = () => {
+    setFontSize((prevSize) => parseFloat((prevSize + 0.2).toFixed(1))); // 글자 크기를 0.2em씩 증가
+  };
 
   return (
     <>
@@ -19,15 +26,16 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>Vite + React</h1>
+      <h1
+        style={{
+          fontSize: `${fontSize}em`,
+          transition: 'font-size 0.3s ease',
+        }}
+      >
+        허용재
+      </h1>
       <div className="card">
-        <button
-          onClick={() => {
-            setCount(count + 1);
-          }}
-        >
-          count is {count}
-        </button>
+        <button onClick={increaseFontSize}>size is {fontSize}</button>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
@@ -35,11 +43,16 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
-      <ul>
-        <li>조선해양공학과 20학번</li>
-        <li>현재 3학년 2학기 재학중입니다</li>
-        <li>MBTI는 ENTP입니다</li>
-      </ul>
+      <div className="centered-list">
+        <div className="card">
+          <h1>안녕하세요!</h1>
+        </div>
+        <ul>
+          <li>조선해양공학과 20학번</li>
+          <li>text2</li>
+          <li>text2</li>
+        </ul>
+      </div>
     </>
   );
 }
