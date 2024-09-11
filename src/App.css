@@ -10,12 +10,34 @@
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
+  align-items: center;
 }
+
+.profile {
+  height: 12em;
+  width: 12em;
+  padding: 1em;
+  will-change: filter;
+  transition: filter 300ms;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2em;
+  gap: 20px;
+}
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
+}
+.profile:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
 }
 
 @keyframes logo-spin {
@@ -43,13 +65,49 @@
 
 .centered-list {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 0;
+  list-style-type:none;
+}
+
+.centered-div {
+  display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0;
-  list-style-type: none;
 }
 
 .centered-list li {
+  position: relative;
   margin: 0 10px;
   padding-left: 1.5em;
+}
+
+.centered-list li::before {
+  content: '->'; /* 화살표 기호 또는 다른 기호를 사용할 수 있습니다 */
+  position: absolute;
+  left: 0; /* 리스트 아이템의 왼쪽에 위치 */
+  top: 50%;
+  transform: translateY(-50%); /* 수직 중앙 정렬 */
+  color: black; /* 화살표 색상 설정 */
+}
+
+.centered-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.centered-h1 {
+  display: flex;
+  align-items: center;
+}
+
+body {
+  background-color:aliceblue;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  background-attachment: fixed;
 }
