@@ -10,12 +10,42 @@
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
+  align-items: center;
 }
+
+.profile {
+  height: 12em;
+  width: 12em;
+  padding: 1em;
+  will-change: filter;
+  transition: filter 300ms;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2em;
+  gap: 20px;
+}
+
+.main-h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  margin: 0;
+}
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
+}
+.profile:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
 }
 
 @keyframes logo-spin {
@@ -35,6 +65,7 @@
 
 .card {
   padding: 2em;
+  overflow: hidden;
 }
 
 .read-the-docs {
@@ -43,13 +74,83 @@
 
 .centered-list {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
   padding: 0;
   list-style-type: none;
 }
 
+.centered-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .centered-list li {
+  position: relative;
   margin: 0 10px;
   padding-left: 1.5em;
+}
+
+.centered-list li::before {
+  content: '-';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: black;
+}
+
+.centered-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.centered-h1 {
+  display: flex;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120vh;
+  overflow: auto;
+}
+
+.app {
+  transition:
+    background-color 0.5s ease,
+    transform 0.5s ease;
+}
+
+.app.scrolled {
+  background-color: aquamarine;
+  transform: translateY(-50px);
+}
+
+.text-disapper {
+  transition: opacity 0.3s ease;
+}
+
+.fixed-arrow {
+  position: fixed;
+  height: 30px;
+  width: 30px;
+  margin-bottom: 10px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  transition: opacity 0.3s ease;
+}
+
+body {
+  background-color: aliceblue;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  background-attachment: fixed;
 }
