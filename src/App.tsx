@@ -89,7 +89,7 @@ const ScrolledComponent = () => {
   };
 
   const increaseFontSize = () => {
-    setFontSize((prevSize) => parseFloat((prevSize + 0.2).toFixed(1))); // 글자 크기를 0.2em씩 증가
+    setFontSize((prevSize) => parseFloat((prevSize + 0.2).toFixed(1)));
   };
 
   return (
